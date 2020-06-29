@@ -1,0 +1,263 @@
+﻿##########################################################################
+#    AROMA Installer (c) 2011-2012 by Ahmad Amarullah                    #
+#    amarullz - xda-developers          http://www.amarullz.com/         #
+##########################################################################
+ini_set("dp","7");
+ini_set("force_colorspace","rgba");
+ini_set("rom_name",       "AccessOS AOSP");
+ini_set("rom_version",    "v1.0");
+ini_set("rom_author",     "AccessAndroid");
+ini_set("rom_device",     "Samsung Galaxy S10e/S10/S10+");
+ini_set("rom_date",       "29 June 2020");
+splash(2500,"splash");
+theme("hades");
+fontresload( "0", "ttf/SamsungOneUI-Regular.ttf", "12" );
+fontresload( "1", "ttf/SamsungOneUI-Regular.ttf", "18" );
+loadlang("langs/en.lang");
+viewbox(
+    "<~welcome.title>",
+    "<~welcome.text> <b>"+ini_get("rom_name")+
+    "</b> <~common.for> <b>"+ini_get("rom_device")+"</b>\n\n"+
+    " <~welcome.device>\t\t: <b><#selectbg_g>"+ini_get("rom_device")+"</#></b>\n"+
+    " <~welcome.version>\t\t: <b><#selectbg_g>"+ini_get("rom_version")+"</#></b>\n"+
+    " <~welcome.developer>\t: <b><#selectbg_g>"+ini_get("rom_author")+"</#></b>\n"+
+    " <~welcome.updated>\t\t: <b><#selectbg_g>"+ini_get("rom_date")+"</#></b>\n\n\n"+
+    "<~welcome.next>",
+    "@10"
+);
+agreebox(
+    "<~terms.title>",
+    "<~terms.desc>",
+    "@license",
+    "<~terms.text>",
+    "<~terms.check>",
+    "<~terms.confirm>"
+);
+textbox(
+    "<~changelog.title>",
+    "<~changelog.desc>",
+    "@update",
+    resread("changelog.txt")
+);
+
+form(
+          "<~main.title>",
+          "<~main.desc>",
+          "@wipe",
+          "main.prop",
+    "wipe", "Wipe options", "", "group",
+    "yes", "Yes, I want to do a full wipe!","(internal storage and multiboot folder will NOT be wiped)", "select",
+    "no", "No, I want to keep all my setup","(not recommended if coming from other rom)", "select.selected",
+    "other", "Bootanimations", "", "group",
+    "sammyP", "Android 9 Samsung bootanimation","animated", "select",
+    "sammyQ", "Android 10 Samsung bootanimation","static", "select",
+    "oth", "Others", "", "group",
+    "efs", "Backup current EFS","will overwrite previous backups", "check.checked",
+    "bsw", "Patch booting logo warnings","", "check",
+    "hosts", "Preserve hosts file","will maintain previous modded hosts file", "check"
+);
+
+form(
+          "<~csc.title>",
+          "<~csc.desc>",
+          "@wipe",
+          "csc.prop",
+    "csc", "Choose your option", "", "group",
+    "prev", "Previous", "Previous CSC will be used", "select.selected",
+    "auto", "Auto", "CSC will be selected according to your current sim card", "select",
+    "ACR","ACR", "Saudi Arabia", "select",
+    "AFG","AFG", "Afghanistan", "select",
+    "AFR","AFR", "Kenya", "select",
+    "ATO","ATO", "Open Austria", "select",
+    "AUT","AUT", "Switzerland", "select",
+    "BGL","BGL", "Bulgaria", "select",
+    "BNG","BNG", "Bangladesh", "select",
+    "BRI","BRI", "Taiwan", "select",
+    "BTC","BTC", "Libya", "select",
+    "BTU","BTU", "United Kingdom", "select",
+    "CAC","CAC", "Uzbekistan", "select",
+    "CAM","CAM", "Cambodia", "select",
+    "CAU","CAU", "Georgia", "select",
+    "CHO","CHO", "Chile", "select",
+    "COO","COO", "Colombia", "select",
+    "CPW","CPW", "United Kingdom (Carphone Warehouse)", "select",
+    "DBT","DBT", "Germany", "select",
+    "DKR","DKR", "Kenya (Zain)", "select",
+    "DOO","DOO", "Dominican Republic", "select",
+    "ECT","ECT", "Nigeria", "select",
+    "EGY","EGY", "Egypt", "select",
+    "EMP","EMP", "Austria", "select",
+    "EON","EON", "Trinidad and Tobago", "select",
+    "EUR","EUR", "Greece", "select",
+    "GLB","GLB", "Philippines (Globe)", "select",
+    "GTO","GTO", "Guatemala", "select",
+    "ILO","ILO", "Israel", "select",
+    "ILP","ILP", "Israel", "select",
+    "INS","INS", "India", "select",
+    "ITV","ITV", "Italy", "select",
+    "KSA","KSA", "Saudi Arabia", "select",
+    "LAO","LAO", "Thailand", "select",
+    "LUX","LUX", "Luxembourg", "select",
+    "LYS","LYS", "United Arab Emirates", "select",
+    "MAT","MAT", "Morocco (MAT)", "select",
+    "MID","MID", "Iraq", "select",
+    "MM1","MM1", "Singapore", "select",
+    "MWD","MWD", "Morocco (MWD)", "select",
+    "MXO","MXO", "Unknown", "select",
+    "MYM","MYM", "Thailand (MPT, Mectel)", "select",
+    "NEE","NEE", "Nordic countries", "select",
+    "NPL","NPL", "Nepal", "select",
+    "NZC","NZC", "New Zealand", "select",
+    "OPS","OPS", "Australia (Optus)", "select",
+    "ORX","ORX", "Slovakia", "select",
+    "PAK","PAK", "Pakistan (PAK)", "select",
+    "PEO","PEO", "Peru", "select",
+    "PHE","PHE", "Spain", "select",
+    "PHN","PHN", "Netherlands", "select",
+    "ROM","ROM", "Romania", "select",
+    "SEB","SEB", "Baltic", "select",
+    "SEE","SEE", "South East Europe", "select",
+    "SEK","SEK", "Ukraine (Kyivstar)", "select",
+    "SER","SER", "Russia", "select",
+    "SIN","SIN", "Singapore (SingTel)", "select",
+    "SIO","SIO", "Slovenia", "select",
+    "SKZ","SKZ", "Kazakhstan", "select",
+    "SLK","SLK", "Sri Lanka", "select",
+    "SMA","SMA", "Philippines (Smart)", "select",
+    "SMP","SMP", "WorldWide", "select",
+    "STH","STH", "Singapore (StarHub)", "select",
+    "TEL","TEL", "Australia (Telstra)", "select",
+    "THL","THL", "Thailand", "select",
+    "THR","THR", "Iran", "select",
+    "TKD","TKD", "Algeria", "select",
+    "TNZ","TNZ", "New Zealand", "select",
+    "TPA","TPA", "Panama", "select",
+    "TPH","TPH", "Portugal (TPH)", "select",
+    "TTT","TTT", "Trinidad and Tobago", "select",
+    "TUN","TUN", "Tunisia", "select",
+    "TUR","TUR", "Turkey", "select",
+    "VAU","VAU", "Australia (Vodafone)", "select",
+    "VNZ","VNZ", "New Zealand (Vodafone)", "select",
+    "XEF","XEF", "France", "select",
+    "XEH","XEH", "Hungary", "select",
+    "XEO","XEO", "Poland", "select",
+    "XEU","XEU", "United Kingdom / Ireland", "select",
+    "XEZ","XEZ", "Czech Republic", "select",
+    "XFA","XFA", "South Africa", "select",
+    "XFE","XFE", "South Africa", "select",
+    "XFV","XFV", "South Africa (Vodafone)", "select",
+    "XME","XME", "Malaysia", "select",
+    "XNZ","XNZ", "New Zealand", "select",
+    "XSA","XSA", "Australia", "select",
+    "XSG","XSG", "United Arab Emirates", "select",
+    "XSP","XSP", "Singapore", "select",
+    "XTC","XTC", "Philippines (Open Line)", "select",
+    "XXV","XXV", "Vietnam", "select"
+);
+
+form(
+          "<~font.title>",
+          "<~font.desc>",
+          "@font",
+          "font.prop",
+    "emoji", "Emoji", "", "group",
+    "samsung", "Samsung Emoji", "", "select.selected",
+    "aosp", "AOSP Emoji", "", "select",
+    "font", "Extra Fonts", "", "group",
+    "sfnt", "Stock Samsung Fonts", "", "check.checked",
+    "gfnt", "Google Fonts", "", "check.checked"
+);
+
+form(
+          "<~cscfeat.title>",
+          "<~cscfeat.desc>",
+          "@customize",
+          "cscfeat.prop",
+    "togg", "Extra toggles", "", "check.checked",
+    "spd", "Network speed in statusbar", "", "check.checked",
+    "dga", "Data icon in power menu", "", "check.checked",
+    "4go", "LTE only network mode", "", "check.checked",
+    "dus", "Data usage in quick panel", "", "check",
+    "lte", "LTE data icon", "4G will be used if this is unchecked", "check",
+    "oth", "Other CSC tweaks", "", "check.checked"
+);
+
+form(
+          "<~bixby.title>",
+          "<~bixby.desc>",
+          "@keys",
+          "key.prop",
+    "val", "Bixby Key Usage", "", "group",
+    "camera", "Camera", "", "select.selected",
+    "calendar", "Calendar", "", "select",
+    "call", "Phone app", "", "select",
+    "mnext", "Next song", "", "select",
+    "mpp", "Play/Pause", "", "select",
+    "search", "Search", "", "select",
+    "qs", "Quick Panel", "", "select",
+    "prtsc", "Screenshot", "", "select",
+    "vass", "Google/Voice Assistant", "", "select",
+    "vmute", "Volume Mute", "", "select",
+    "rec", "Recents", "", "select",
+    "home", "Home", "", "select",
+    "back", "Back", "", "select",
+    "pow", "Power", "", "select",
+    "none", "No Action", "", "select"
+);
+
+form(
+          "<~bloat.title>",
+          "<~bloat.desc>",
+          "@apps",
+          "bloat.prop",
+    "sbl", "Apps", "", "group",
+    "ant", "ANT+ Apps", "", "check",
+    "vv", "Google Assistant", "", "check.checked",
+    "chr", "Google Chrome", "", "check.checked",
+    "duo", "Google Duo", "", "check"
+);
+
+ini_set("text_next", "<~install.start>");
+viewbox(
+    "",
+    "<~install.notice>",
+    "@update"
+);
+ini_set(
+    "text_next", 
+    "<~text_next>"
+);
+ini_set(
+    "icon_next", 
+    "@finish"
+);
+ini_set(
+    "text_next",
+    "<~install.next2>"
+);
+ini_set("text_next","<~install.end3>");
+alert("<~donate.title>","<~donate.desc>", "@alert");
+install(
+    "",
+    "<~install.text1> <b>"+ini_get("rom_name")+
+    "</b>. <~install.text2>",
+    "@install",
+    "<~install.finish> <b>"+ini_get("rom_name")+
+    "</b>. <~install.next1>"
+ );
+checkviewbox(
+    "",
+    "<#selectbg_g><b><~install.end1></b></#>\n\n"+
+    "<b>"+ini_get("rom_name")+"</b> <~common.for> <b>"+ini_get("rom_device")+
+    "</b> <~install.end2>",
+    "@welcome",
+    "<~install.reboot>",
+    "0",
+    "reboot_it"
+);
+if
+  getvar("reboot_it")=="1"
+then
+  reboot("onfinish", "recovery");
+endif;
+

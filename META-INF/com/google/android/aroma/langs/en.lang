@@ -1,0 +1,117 @@
+﻿### LICENSE:
+#
+# Copyright (C) 2011 Ahmad Amarullah ( http://amarullz.com/ )
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+### LANGUAGE STRING RESOURCE FILE
+#
+#   Language  : English
+#   By        : corsicanu
+#
+
+#
+#--- COMMON SYSTEM STRING RESOURCE
+#
+text_ok=OK
+text_next=Next
+text_back=Back
+text_yes=Yes
+text_no=No
+text_about=About
+text_quit=Quit Installation
+text_quit_msg=Are you sure to quit the installer?
+
+#
+#-- CUSTOM STRING RESOURCE
+#
+common.for=for
+
+welcome.title=Welcome!
+welcome.text=You are about to install
+welcome.device=DEVICE	
+welcome.version=VERSION
+welcome.updated=UPDATED
+welcome.developer=DEVELOPER
+welcome.next=Press <b>Next</b> to Continue the Installation...
+
+terms.title=Disclaimer
+terms.desc=Please read carefully the Terms of Use
+terms.check=I agree with all above
+terms.confirm=Please check the agreement
+terms.text=\
+We will not be responsible for bricked devices, dead SD cards, thermonuclear war, or you getting fired because the alarm app failed. \
+Please do some research if you have any concerns about features included in this zip before flashing it!\
+YOU are the one choosing to make these modifications, and if you point the finger at me for messing up your device, I will laugh at you.\
+\
+\
+<b><#f00>NOTE:</#></b>\
+*Before trying to flash, make sure your device is supported in the GitHub thread of AccessOS!!\
+\
+*Wipe Data is needed if you come from another custom ROM or AOSP\
+\
+*If you have/had stock rom installed, you most probably have data partition encrypted, so <b><#f00>rom will not boot</#></b> unless you already formatted data partition from <b>TWRP-wipe menu-"Format data" button</b>\
+
+changelog.title=Changelog / Features
+changelog.desc=Recent changes
+
+main.title=Main options
+main.desc=Select desired configuration
+
+csc.title=CSC Options
+csc.desc=Select Country Sale Codes to be installed
+
+feat.title=Features
+feat.desc=Select what do you want to install
+
+font.title=Font & Emoji options
+font.desc=Select fonts/emojis to be installed
+
+goodlock.title=GoodLock options
+goodlock.desc=Select GoodLock apps to be installed
+
+donate.title=Notice
+donate.desc=If you like my work and want to keep me going, you can always send me some pizza/coffee/drugs/drinks or anything else via patreon.com/CADOPS
+
+root.title=WARNING!
+root.desc=<b>This rom does not contain any root due to the embedded flashing issues.</b>
+<b>You need to flash root separately after flashing the rom</b>
+
+cscfeat.title=CSC Features
+cscfeat.desc=Select CSC features you want to enable
+
+bixby.title=Bixby Key
+bixby.desc=Select how Bixby Key will be used
+
+bloat.title=Bloatware
+bloat.desc=Select what bloatware you want to install
+
+10.title=Android 10 Apps
+10.desc=Select what Android 10 Apps you want to install
+
+install.notice=The wizard is ready to begin installation.\
+\
+Press <b>Install</b> to begin the installation.\
+\
+If you want to review or change any of your installation settings, press <b>Back</b>. Press 3 dot menu -> Quit Installation to exit the wizard.
+
+install.start=Install
+install.text1=Please wait while installation wizard installs
+install.text2=This may take several minutes...
+install.finish=The installation wizard has successfully installed
+install.next1=Press Next to continue...
+install.next2=Next
+install.end1=Installation Completed
+install.end2=has been successfully installed into your device
+install.end3=End
+install.reboot=Reboot Device (rooted)

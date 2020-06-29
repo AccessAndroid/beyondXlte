@@ -1,0 +1,43 @@
+<b><#selectbg_g>Access OS v1.0</#></b>
+<*>Initial release</*>
+
+<b><#selectbg_g>Rom features</#></b>
+<*>Full G975FXXU4CTC9 April release</*>
+<*>Proper S10e integration with files from G970FXXU4CTC9 April release</*>
+<*>Proper S10 integration with files from G973FXXU4CTC9 April release</*>
+<*>Updated Magisk from included prepatched TWRPs to 20.4 stable</*>
+<*>April security patch</*>
+<*>Proper S10e integration</*>
+<*>Proper S10 integration</*>
+<*>February security patch</*>
+<*>Heavy debloated/deknoxed</*>
+<*>RMM prepatched</*>
+<*>hadesKernel</*>
+<*>Magisk patched twrp files for all supported variants to be flashed along with the rom</*>
+<*>Aroma Installer</*>
+<*>Selectable Bootanimations</*>
+<*>Bixby Key remapping</*>
+<*>Google Fonts</*>
+<*>Duos + sdCard Patch</*>
+<*>Disabled high brightness warning</*>
+<*>Disabled safe volume warning</*>
+<*>Patched reboot button to reboot rooted</*>
+<*>Patched settings to show status Official</*>
+<*>Enabled some csc features (extra toggles, call record, statusbar network speed etc.)</*>
+<*>Removed extra product bloatware (keyboard languages & handwriting recognition data)</*>
+
+<b><#selectbg_g>Kernel Features</#></b>
+<*>G97*FXXU4BTA8 february security patch source</*>
+<*>upstreamed to 4.14.171 (stable linux kernel)</*>
+<*>compiled with clang 10.0.1 (r370808) cross compiled with custom arm64 gnu gcc 10</*>
+<*>fully enforcing with the ability to change to permissive</*>
+<*>disabled audit, debugging, logging, kperfmod, knox, proca, defex, rkp, tima, root restriction, kernel samepage merging, unused governors, io schedulers, compression algorithms, TCP congestion algorithms </*>
+<*>added maple io scheduler as default</*>
+<*>added Moro sound control (wired headphones only)</*>
+<*>added boeffla wakelock blocker with a default list of wakelocks for better battery</*>
+<*>forced zram to lz4 compression for better decompression speeds</*>
+<*>reduced swappiness and optimized memory usage</*>
+<*>updated lz4 module</*>
+<*>added crc toggle</*>
+<*>added wireguard support</*>
+<*>added mass_storage mode for drivedroid app (use only latest beta)</*>
